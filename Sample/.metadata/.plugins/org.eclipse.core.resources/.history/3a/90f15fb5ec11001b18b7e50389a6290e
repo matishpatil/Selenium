@@ -1,0 +1,17 @@
+package testng;
+
+import org.testng.annotations.BeforeSuite;
+
+public class Hooks {
+	
+	@BeforeSuite
+	public void beforeSuite() {
+		System.out.println("I am in before suite");
+	}
+	
+	@AfterSuite
+	public void afterSuite() {
+		System.out.println("I am in after suite");
+	}
+
+}

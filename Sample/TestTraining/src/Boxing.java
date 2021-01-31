@@ -1,0 +1,50 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Boxing {
+
+	public static void main(String[] args) {
+		
+		//Primitive to Wrapper - Boxing
+		//Wrapper to primitive - Uboxing
+		//Primitive to wrapper to primitive - Autoboxing
+		
+		//Reverse a string - CAPCO
+		
+		String str = "CAPCO";
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append(str);
+		sb.reverse();
+		
+		System.out.println("Str1 "+ sb);
+		
+		// Reverse string without using reverse method
+		String str2 = "";
+		String str3 = "";
+		char[] chr = str.toCharArray();
+		for(int i = chr.length-1; i >= 0; i--) {
+			str2 += chr[i];
+			str3 += str.charAt(i);
+		}
+		System.out.println("Str2 " + str2);
+		System.out.println("Str3 "+ str3);
+		
+		
+		int a = 123;
+		Integer c = 342;
+		
+		List<Integer> b = new ArrayList<>();
+		b.add(a);
+		
+		System.out.println(b.get(0).intValue());
+		
+		
+		  if (c instanceof Integer) { System.out.println("True"); }
+		 
+		
+		System.out.println(b.getClass().getName() );
+		
+	}
+
+}

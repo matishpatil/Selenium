@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- <suite name="test_suite">
+	<test name="Car Loan">
+		<classes>
+			<class name="testng.Car_loan" />
+		</classes>
+	</test> 
+	<test name="Personal Loan">
+		<classes>
+			<class name="testng.Personal_loan" />
+		</classes>
+	</test> 
+	<test name="Home Loan">
+		<classes>
+			<class name="testng.Home_loan" />
+		</classes>
+	</test>
+</suite>  -->
+
+<!-- <suite name="test_suite">
+	<test name="Software Company">
+		<groups>
+			<run>
+				<include name="software company" />
+				<exclude name="Infosys" />
+			</run>
+		</groups>
+		<classes>
+			<class name="testng.Groups" />
+		</classes>
+	</test>
+</suite> -->
+
+
+<!-- <suite name="Suite"> <parameter name="a" value="5" /> <parameter name="b" 
+	value="3" /> <test name="Sum"> <classes> <class name="data.Add"/> </classes> 
+	</test> Test <test name="Subtract"> <classes> <class name="data.Subtract" 
+	/> </classes> </test> <test name="Multiply"> <classes> <class name="data.Multiply" 
+	/> </classes> </test> </suite> Suite -->
+
+<!-- <suite name="Suite"> <test name="Listeners"> <classes> <class name="listener.Listener"></class> 
+	</classes> </test> </suite> Suite -->

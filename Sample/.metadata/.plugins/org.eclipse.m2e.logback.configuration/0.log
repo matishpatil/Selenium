@@ -1,0 +1,549 @@
+2020-10-07 11:04:33,571 [main] ERROR org.eclipse.jgit.util.SystemReader - Creating XDG_CONFIG_HOME directory U:\.config failed
+java.nio.file.FileSystemException: U:\.config: Unable to determine if root directory exists
+	at java.nio.file.Files.createDirectories(Unknown Source) ~[na:1.8.0_261]
+	at org.eclipse.jgit.util.SystemReader$Default.getXDGConfigHome(SystemReader.java:120) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader$Default.openJGitConfig(SystemReader.java:131) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:348) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:373) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:321) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.egit.core.Activator$EclipseSystemReader.getUserConfig(Activator.java:1177) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.jgit.util.Monitoring.registerMBean(Monitoring.java:54) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.<init>(WindowCache.java:473) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.reconfigure(WindowCache.java:362) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.<clinit>(WindowCache.java:343) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.storage.file.WindowCacheConfig.install(WindowCacheConfig.java:268) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.egit.core.project.GitProjectData.reconfigureWindowCache(GitProjectData.java:428) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.core.Activator.start(Activator.java:260) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:456) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_261]
+	at org.eclipse.egit.ui.Activator$RepositoryChangeScanner.<init>(Activator.java:632) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.ui.Activator.setupRepoChangeScanner(Activator.java:897) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.ui.Activator.start(Activator.java:348) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:477) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:620) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:923) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.ui.internal.services.WorkbenchServiceRegistry.getSourceProviders(WorkbenchServiceRegistry.java:170) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.services.SourceProviderService.readRegistry(SourceProviderService.java:104) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench$34.runWithException(Workbench.java:2340) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:36) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236) [org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:na]
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561) [org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:na]
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:94) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.initializeDefaultServices(Workbench.java:2335) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1640) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2811) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:646) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338) ~[org.eclipse.core.databinding.observable_1.9.0.v20200205-2119.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154) ~[org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150) ~[na:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203) ~[org.eclipse.equinox.app_1.4.400.v20191212-0743.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_261]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+2020-10-07 11:04:44,271 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-08 11:03:42,635 [main] ERROR org.eclipse.jgit.util.SystemReader - Creating XDG_CONFIG_HOME directory U:\.config failed
+java.nio.file.FileSystemException: U:\.config: Unable to determine if root directory exists
+	at java.nio.file.Files.createDirectories(Unknown Source) ~[na:1.8.0_261]
+	at org.eclipse.jgit.util.SystemReader$Default.getXDGConfigHome(SystemReader.java:120) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader$Default.openJGitConfig(SystemReader.java:131) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:348) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:373) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:321) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.egit.core.Activator$EclipseSystemReader.getUserConfig(Activator.java:1177) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.jgit.util.Monitoring.registerMBean(Monitoring.java:54) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.<init>(WindowCache.java:473) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.reconfigure(WindowCache.java:362) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.<clinit>(WindowCache.java:343) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.storage.file.WindowCacheConfig.install(WindowCacheConfig.java:268) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.egit.core.project.GitProjectData.reconfigureWindowCache(GitProjectData.java:428) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.core.Activator.start(Activator.java:260) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:456) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_261]
+	at org.eclipse.egit.ui.Activator$RepositoryChangeScanner.<init>(Activator.java:632) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.ui.Activator.setupRepoChangeScanner(Activator.java:897) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.ui.Activator.start(Activator.java:348) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:477) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:620) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:923) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.ui.internal.services.WorkbenchServiceRegistry.getSourceProviders(WorkbenchServiceRegistry.java:170) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.services.SourceProviderService.readRegistry(SourceProviderService.java:104) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench$34.runWithException(Workbench.java:2340) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:36) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236) [org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:na]
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561) [org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:na]
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:94) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.initializeDefaultServices(Workbench.java:2335) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1640) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2811) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:646) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338) ~[org.eclipse.core.databinding.observable_1.9.0.v20200205-2119.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154) ~[org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150) ~[na:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203) ~[org.eclipse.equinox.app_1.4.400.v20191212-0743.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_261]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+2020-10-08 11:03:52,379 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-09 14:02:21,542 [main] ERROR org.eclipse.jgit.util.SystemReader - Creating XDG_CONFIG_HOME directory U:\.config failed
+java.nio.file.FileSystemException: U:\.config: Unable to determine if root directory exists
+	at java.nio.file.Files.createDirectories(Unknown Source) ~[na:1.8.0_261]
+	at org.eclipse.jgit.util.SystemReader$Default.getXDGConfigHome(SystemReader.java:120) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader$Default.openJGitConfig(SystemReader.java:131) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:348) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:373) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:321) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.egit.core.Activator$EclipseSystemReader.getUserConfig(Activator.java:1177) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.jgit.util.Monitoring.registerMBean(Monitoring.java:54) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.<init>(WindowCache.java:473) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.reconfigure(WindowCache.java:362) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.<clinit>(WindowCache.java:343) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.storage.file.WindowCacheConfig.install(WindowCacheConfig.java:268) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.egit.core.project.GitProjectData.reconfigureWindowCache(GitProjectData.java:428) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.core.Activator.start(Activator.java:260) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:456) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_261]
+	at org.eclipse.egit.ui.Activator$RepositoryChangeScanner.<init>(Activator.java:632) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.ui.Activator.setupRepoChangeScanner(Activator.java:897) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.ui.Activator.start(Activator.java:348) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:477) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:620) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:923) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.ui.internal.services.WorkbenchServiceRegistry.getSourceProviders(WorkbenchServiceRegistry.java:170) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.services.SourceProviderService.readRegistry(SourceProviderService.java:104) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench$34.runWithException(Workbench.java:2340) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:36) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236) [org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:na]
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561) [org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:na]
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:94) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.initializeDefaultServices(Workbench.java:2335) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1640) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2811) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:646) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338) ~[org.eclipse.core.databinding.observable_1.9.0.v20200205-2119.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154) ~[org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150) ~[na:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203) ~[org.eclipse.equinox.app_1.4.400.v20191212-0743.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_261]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+2020-10-09 14:02:28,762 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-13 14:01:55,758 [main] ERROR org.eclipse.jgit.util.SystemReader - Creating XDG_CONFIG_HOME directory U:\.config failed
+java.nio.file.FileSystemException: U:\.config: Unable to determine if root directory exists
+	at java.nio.file.Files.createDirectories(Unknown Source) ~[na:1.8.0_261]
+	at org.eclipse.jgit.util.SystemReader$Default.getXDGConfigHome(SystemReader.java:120) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader$Default.openJGitConfig(SystemReader.java:131) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:348) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:373) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:321) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.egit.core.Activator$EclipseSystemReader.getUserConfig(Activator.java:1177) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.jgit.util.Monitoring.registerMBean(Monitoring.java:54) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.<init>(WindowCache.java:473) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.reconfigure(WindowCache.java:362) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.<clinit>(WindowCache.java:343) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.jgit.storage.file.WindowCacheConfig.install(WindowCacheConfig.java:268) [org.eclipse.jgit_5.7.0.202003110725-r.jar:5.7.0.202003110725-r]
+	at org.eclipse.egit.core.project.GitProjectData.reconfigureWindowCache(GitProjectData.java:428) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.core.Activator.start(Activator.java:260) [org.eclipse.egit.core_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:456) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_261]
+	at org.eclipse.egit.ui.Activator$RepositoryChangeScanner.<init>(Activator.java:632) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.ui.Activator.setupRepoChangeScanner(Activator.java:897) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.egit.ui.Activator.start(Activator.java:348) [org.eclipse.egit.ui_5.7.0.202003110725-r.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:477) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_261]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:620) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:923) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63) [org.eclipse.equinox.registry_3.8.700.v20200121-1457.jar:na]
+	at org.eclipse.ui.internal.services.WorkbenchServiceRegistry.getSourceProviders(WorkbenchServiceRegistry.java:170) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.services.SourceProviderService.readRegistry(SourceProviderService.java:104) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench$34.runWithException(Workbench.java:2340) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:36) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236) [org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:na]
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561) [org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:na]
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:94) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.initializeDefaultServices(Workbench.java:2335) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1640) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2811) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:646) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338) ~[org.eclipse.core.databinding.observable_1.9.0.v20200205-2119.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154) ~[org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150) ~[na:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203) ~[org.eclipse.equinox.app_1.4.400.v20191212-0743.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255) ~[org.eclipse.osgi_3.15.200.v20200214-1600.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_261]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447) ~[org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:na]
+2020-10-13 14:02:04,049 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-16 14:02:59,801 [Worker-377: Creating project "selenium"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capco.training:selenium:0.0.1-SNAPSHOT @ C:\development\Sample\selenium\pom.xml.
+2020-10-16 14:03:00,709 [Worker-377: Creating project "selenium"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /selenium/src/main/java
+2020-10-16 14:03:00,711 [Worker-377: Creating project "selenium"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /selenium/src/main/resources
+2020-10-16 14:03:00,711 [Worker-377: Creating project "selenium"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /selenium/src/test/java
+2020-10-16 14:03:00,711 [Worker-377: Creating project "selenium"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /selenium/src/test/resources
+2020-10-16 14:03:01,252 [Worker-380: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-10-16 14:03:01,265 [Worker-380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:03:01,267 [Worker-380: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-10-16 14:03:01,276 [Worker-380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:03:48,677 [Worker-377: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capco.training:selenium:0.0.1-SNAPSHOT @ C:\development\Sample\selenium\pom.xml.
+2020-10-16 14:03:51,985 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:03:51,987 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:03:51,990 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:03:51,990 [Worker-377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:03:52,486 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55-sources.jar
+2020-10-16 14:03:53,111 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55-sources.jar
+2020-10-16 14:03:53,322 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.jcraft:jsch:0.1.55
+2020-10-16 14:03:53,930 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-java/3.7.0/selenium-java-3.7.0-sources.jar
+2020-10-16 14:03:54,313 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-java/3.7.0/selenium-java-3.7.0-sources.jar
+2020-10-16 14:03:54,461 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-java:3.7.0
+2020-10-16 14:03:55,206 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-api/3.7.0/selenium-api-3.7.0-sources.jar
+2020-10-16 14:03:55,806 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-api/3.7.0/selenium-api-3.7.0-sources.jar
+2020-10-16 14:03:55,891 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-api:3.7.0
+2020-10-16 14:03:56,502 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-chrome-driver/3.7.0/selenium-chrome-driver-3.7.0-sources.jar
+2020-10-16 14:03:56,845 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-chrome-driver/3.7.0/selenium-chrome-driver-3.7.0-sources.jar
+2020-10-16 14:03:56,942 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-chrome-driver:3.7.0
+2020-10-16 14:03:57,541 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-edge-driver/3.7.0/selenium-edge-driver-3.7.0-sources.jar
+2020-10-16 14:03:57,883 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-edge-driver/3.7.0/selenium-edge-driver-3.7.0-sources.jar
+2020-10-16 14:03:57,952 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-edge-driver:3.7.0
+2020-10-16 14:03:58,553 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-firefox-driver/3.7.0/selenium-firefox-driver-3.7.0-sources.jar
+2020-10-16 14:03:58,893 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-firefox-driver/3.7.0/selenium-firefox-driver-3.7.0-sources.jar
+2020-10-16 14:03:58,956 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-firefox-driver:3.7.0
+2020-10-16 14:03:59,718 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-ie-driver/3.7.0/selenium-ie-driver-3.7.0-sources.jar
+2020-10-16 14:04:00,121 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-ie-driver/3.7.0/selenium-ie-driver-3.7.0-sources.jar
+2020-10-16 14:04:00,257 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-ie-driver:3.7.0
+2020-10-16 14:04:01,171 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-opera-driver/3.7.0/selenium-opera-driver-3.7.0-sources.jar
+2020-10-16 14:04:01,564 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-opera-driver/3.7.0/selenium-opera-driver-3.7.0-sources.jar
+2020-10-16 14:04:01,647 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-opera-driver:3.7.0
+2020-10-16 14:04:02,257 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-remote-driver/3.7.0/selenium-remote-driver-3.7.0-sources.jar
+2020-10-16 14:04:03,038 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-remote-driver/3.7.0/selenium-remote-driver-3.7.0-sources.jar
+2020-10-16 14:04:03,116 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-remote-driver:3.7.0
+2020-10-16 14:04:03,717 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-safari-driver/3.7.0/selenium-safari-driver-3.7.0-sources.jar
+2020-10-16 14:04:04,058 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-safari-driver/3.7.0/selenium-safari-driver-3.7.0-sources.jar
+2020-10-16 14:04:04,130 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-safari-driver:3.7.0
+2020-10-16 14:04:04,742 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-support/3.7.0/selenium-support-3.7.0-sources.jar
+2020-10-16 14:04:05,334 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-support/3.7.0/selenium-support-3.7.0-sources.jar
+2020-10-16 14:04:05,428 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-support:3.7.0
+2020-10-16 14:04:06,035 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.7.5/byte-buddy-1.7.5-sources.jar
+2020-10-16 14:04:07,571 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.7.5/byte-buddy-1.7.5-sources.jar
+2020-10-16 14:04:07,718 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.bytebuddy:byte-buddy:1.7.5
+2020-10-16 14:04:08,351 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-exec/1.3/commons-exec-1.3-sources.jar
+2020-10-16 14:04:08,715 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-exec/1.3/commons-exec-1.3-sources.jar
+2020-10-16 14:04:08,819 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.commons:commons-exec:1.3
+2020-10-16 14:04:09,431 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar
+2020-10-16 14:04:10,344 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar
+2020-10-16 14:04:10,538 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-codec:commons-codec:1.10
+2020-10-16 14:04:11,136 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar
+2020-10-16 14:04:11,613 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar
+2020-10-16 14:04:11,759 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-logging:commons-logging:1.2
+2020-10-16 14:04:12,377 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.2/gson-2.8.2-sources.jar
+2020-10-16 14:04:12,687 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.2/gson-2.8.2-sources.jar
+2020-10-16 14:04:12,777 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.code.gson:gson:2.8.2
+2020-10-16 14:04:13,390 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava/23.0/guava-23.0-sources.jar
+2020-10-16 14:04:14,660 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/guava/guava/23.0/guava-23.0-sources.jar
+2020-10-16 14:04:14,766 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.guava:guava:23.0
+2020-10-16 14:04:15,371 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9-sources.jar
+2020-10-16 14:04:15,388 [Worker-380: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for com.google.code.findbugs:jsr305:1.3.9
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.code.findbugs:jsr305:jar:sources:1.3.9
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+2020-10-16 14:04:15,997 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18-sources.jar
+2020-10-16 14:04:16,344 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18-sources.jar
+2020-10-16 14:04:16,512 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.errorprone:error_prone_annotations:2.0.18
+2020-10-16 14:04:17,117 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-sources.jar
+2020-10-16 14:04:17,474 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-sources.jar
+2020-10-16 14:04:17,612 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.j2objc:j2objc-annotations:1.1
+2020-10-16 14:04:18,225 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14-sources.jar
+2020-10-16 14:04:18,562 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14-sources.jar
+2020-10-16 14:04:18,659 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.codehaus.mojo:animal-sniffer-annotations:1.14
+2020-10-16 14:04:19,264 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-sources.jar
+2020-10-16 14:04:20,319 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-sources.jar
+2020-10-16 14:04:20,429 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.httpcomponents:httpclient:4.5.3
+2020-10-16 14:04:21,044 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6-sources.jar
+2020-10-16 14:04:21,552 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6-sources.jar
+2020-10-16 14:04:21,713 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.httpcomponents:httpcore:4.4.6
+2020-10-16 14:04:22,334 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5-sources.jar
+2020-10-16 14:04:23,045 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5-sources.jar
+2020-10-16 14:04:23,162 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for info.cukes:cucumber-java:1.2.5
+2020-10-16 14:04:23,781 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5-sources.jar
+2020-10-16 14:04:24,113 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5-sources.jar
+2020-10-16 14:04:24,201 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for info.cukes:cucumber-core:1.2.5
+2020-10-16 14:04:24,868 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3-sources.jar
+2020-10-16 14:04:25,294 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3-sources.jar
+2020-10-16 14:04:25,386 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for info.cukes:cucumber-html:0.2.3
+2020-10-16 14:04:25,996 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5-sources.jar
+2020-10-16 14:04:26,344 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5-sources.jar
+2020-10-16 14:04:26,437 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for info.cukes:cucumber-jvm-deps:1.0.5
+2020-10-16 14:04:27,092 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5-sources.jar
+2020-10-16 14:04:27,433 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5-sources.jar
+2020-10-16 14:04:27,605 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for info.cukes:cucumber-junit:1.2.5
+2020-10-16 14:04:28,211 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/info/cukes/cucumber-picocontainer/1.2.5/cucumber-picocontainer-1.2.5-sources.jar
+2020-10-16 14:04:28,538 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/info/cukes/cucumber-picocontainer/1.2.5/cucumber-picocontainer-1.2.5-sources.jar
+2020-10-16 14:04:28,635 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for info.cukes:cucumber-picocontainer:1.2.5
+2020-10-16 14:04:29,241 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/info/cukes/gherkin/2.12.2/gherkin-2.12.2-sources.jar
+2020-10-16 14:04:29,846 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/info/cukes/gherkin/2.12.2/gherkin-2.12.2-sources.jar
+2020-10-16 14:04:30,008 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for info.cukes:gherkin:2.12.2
+2020-10-16 14:04:30,624 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/picocontainer/picocontainer/2.15/picocontainer-2.15-sources.jar
+2020-10-16 14:04:30,987 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/picocontainer/picocontainer/2.15/picocontainer-2.15-sources.jar
+2020-10-16 14:04:31,124 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.picocontainer:picocontainer:2.15
+2020-10-16 14:04:31,725 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/aventstack/extentreports/3.1.2/extentreports-3.1.2-sources.jar
+2020-10-16 14:04:32,310 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/aventstack/extentreports/3.1.2/extentreports-3.1.2-sources.jar
+2020-10-16 14:04:32,396 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.aventstack:extentreports:3.1.2
+2020-10-16 14:04:33,031 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/freemarker/freemarker/2.3.23/freemarker-2.3.23-sources.jar
+2020-10-16 14:04:34,244 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/freemarker/freemarker/2.3.23/freemarker-2.3.23-sources.jar
+2020-10-16 14:04:34,364 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.freemarker:freemarker:2.3.23
+2020-10-16 14:04:34,968 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0-sources.jar
+2020-10-16 14:04:35,765 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0-sources.jar
+2020-10-16 14:04:35,859 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mongodb:mongodb-driver:3.3.0
+2020-10-16 14:04:36,489 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mongodb/bson/3.3.0/bson-3.3.0-sources.jar
+2020-10-16 14:04:36,875 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mongodb/bson/3.3.0/bson-3.3.0-sources.jar
+2020-10-16 14:04:36,942 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mongodb:bson:3.3.0
+2020-10-16 14:04:37,557 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0-sources.jar
+2020-10-16 14:04:38,744 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0-sources.jar
+2020-10-16 14:04:38,841 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mongodb:mongodb-driver-core:3.3.0
+2020-10-16 14:04:39,441 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2-sources.jar
+2020-10-16 14:04:40,074 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2-sources.jar
+2020-10-16 14:04:41,234 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.httpcomponents:httpmime:4.5.2
+2020-10-16 14:04:41,921 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.9.2/jsoup-1.9.2-sources.jar
+2020-10-16 14:04:42,580 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.9.2/jsoup-1.9.2-sources.jar
+2020-10-16 14:04:43,115 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.jsoup:jsoup:1.9.2
+2020-10-16 14:04:43,759 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/vimalselvam/cucumber-extentsreport/3.0.2/cucumber-extentsreport-3.0.2-sources.jar
+2020-10-16 14:04:44,115 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/vimalselvam/cucumber-extentsreport/3.0.2/cucumber-extentsreport-3.0.2-sources.jar
+2020-10-16 14:04:44,251 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.vimalselvam:cucumber-extentsreport:3.0.2
+2020-10-16 14:04:45,057 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.20.1/surefire-booter-2.20.1-sources.jar
+2020-10-16 14:04:45,726 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.20.1/surefire-booter-2.20.1-sources.jar
+2020-10-16 14:04:46,219 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.maven.surefire:surefire-booter:2.20.1
+2020-10-16 14:04:47,156 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.20.1/surefire-api-2.20.1-sources.jar
+2020-10-16 14:04:47,887 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.20.1/surefire-api-2.20.1-sources.jar
+2020-10-16 14:04:48,356 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.maven.surefire:surefire-api:2.20.1
+2020-10-16 14:04:48,964 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/2.20.1/surefire-logger-api-2.20.1-sources.jar
+2020-10-16 14:04:49,383 [Worker-380: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/2.20.1/surefire-logger-api-2.20.1-sources.jar
+2020-10-16 14:04:49,689 [Worker-380: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.maven.surefire:surefire-logger-api:2.20.1
+2020-10-16 14:04:50,031 [Worker-378: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:04:50,032 [Worker-378: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:04:50,042 [Worker-378: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:04:50,053 [Worker-378: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:04:51,579 [Worker-378: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9-javadoc.jar
+2020-10-16 14:04:51,742 [Worker-378: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for com.google.code.findbugs:jsr305:1.3.9
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.code.findbugs:jsr305:jar:javadoc:1.3.9
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373) ~[org.eclipse.m2e.core_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+2020-10-16 14:20:43,379 [Worker-381: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:20:43,380 [Worker-381: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:20:43,382 [Worker-381: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:20:43,384 [Worker-381: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:21:06,720 [Worker-384: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:21:06,720 [Worker-384: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:21:06,723 [Worker-384: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:21:06,723 [Worker-384: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-16 14:23:39,563 [Worker-394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:23:39,564 [Worker-394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:23:39,565 [Worker-394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:23:39,573 [Worker-394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-16 14:23:55,848 [Worker-404: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:23:55,849 [Worker-404: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-16 14:23:55,850 [Worker-404: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-16 14:23:55,851 [Worker-404: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource

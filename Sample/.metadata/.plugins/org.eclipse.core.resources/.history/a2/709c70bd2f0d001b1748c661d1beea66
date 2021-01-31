@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Boxing {
+
+	public static void main(String[] args) {
+		
+		//Primitive to Wrapper - Boxing
+		//Wrapper to primitive - Uboxing
+		//Primitive to wrapper to primitive - Autoboxing
+		
+		int a = 123;
+		
+		List<Integer> b = new ArrayList<>();
+		b.add(a);
+		
+		System.out.println(b.get(0).intValue());
+	}
+
+}

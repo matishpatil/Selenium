@@ -1,0 +1,10 @@
+
+public class Capability {
+
+	public static void main(String[] args) {
+		
+		// Selecting a value from dropdown list
+		// https://letskodeit.teachable.com/p/practice
+	}
+
+}
